@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import PureModal from 'react-pure-modal';
 
-const GinItem = ({ ginItem, setSelectedCocktail }) => {
+const GinItem = ({ ginItem }) => {
     const [modal, setModal] = useState(false);
+    console.log(ginItem.strDrink);
 
 return (
     <article>
-    <div >
-        <h1>{ginItem.strDrink}</h1>
-    </div>
+        <h3>{ginItem.strDrink}</h3>
 <PureModal
     header="Your header"
     footer={
@@ -21,7 +20,7 @@ return (
     onClose={() => {setModal(false);
     return true;}}
 >
-<h2>{ginItem.strDrink}</h2>
+<h3>{ginItem.strDrink}</h3>
         {ginItem.strIngredient1 && (
         <p>{`${ginItem.strMeasure1} ${ginItem.strIngredient1}`}</p>
         )}
@@ -37,8 +36,8 @@ return (
         {ginItem.strIngredient5 && (
         <p>{`${ginItem.strMeasure5} ${ginItem.strIngredient5}`}</p>
         )}
-</PureModal>;
-<button className="button" onClick={() => setModal(true)}>Open simple modal</button>
+</PureModal>
+<button className="button" onClick={() => setModal(true)}>Details</button>
     </article>
 );
 };

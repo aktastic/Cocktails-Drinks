@@ -1,4 +1,3 @@
-import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import AlkFrei from "./components/alkFrei/AlkFrei"
 import Rum from "./components/rum/Rum"
@@ -33,8 +32,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/scotch" element={<Scotch />} />
         <Route path="/randomdrink" element={<RandomDrink />} />
-          <Route path="/rum" element={<Rum/>}/>
+        <Route path="/rum" element={<Rum/>}/>
         <Route path="/alkFrei" element={<AlkFrei/>}/>
+        <Route path="/user-search-list" element={<SearchList/>}/>
       </Routes>
 
     </SearchFetchContext.Provider>
