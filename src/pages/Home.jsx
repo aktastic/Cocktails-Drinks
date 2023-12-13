@@ -1,5 +1,6 @@
 import Header from "../components/headerComponents/Header";
 import Footer from "../components/footerComponents/Footer";
+import SearchList from "../components/headerComponents/SearchList";
 
 const Home = () => {
   return (
