@@ -1,9 +1,11 @@
-import { NavLink } from "react-router-dom";
+
+import { NavLink, Link } from "react-router-dom";
 import "./Header.scss";
 import Searchbar from "./Searchbar";
 import { useContext } from "react";
 import "./Searchbar.scss";
 import { UserSearchInputContext } from "../../context/Context"
+
 
 const Header = () => {
 
@@ -16,11 +18,13 @@ const Header = () => {
     <>
       <header>
         <nav>
+
           <NavLink to='/'onClick={clearInputfield}>
             <h1>Drinks&Chill</h1>
           </NavLink>
           
           <NavLink to='/' onClick={clearInputfield}>Home</NavLink>
+
         </nav>
         <div>
           <h1>Cocktails & Drinks!</h1>
