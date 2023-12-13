@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "../components/headerComponents/Header";
 import Footer from "../components/footerComponents/Footer";
 
@@ -6,7 +7,8 @@ const Home = () => {
     <>
       <Header />
       <main>
-        <p>HIER KOMMT DIE MAIN SECTION</p>
+        <Link to="/scotch"> SCOTCH</Link>
+        <Link to="/randomdrink">Random DRINK</Link>
       </main>
       <Footer />
     </>
