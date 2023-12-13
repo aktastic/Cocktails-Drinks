@@ -22,7 +22,7 @@ return (
     onClose={() => {setModal(false);
     return true;}}
 >
-<h2>{vodkaItem.strDrink}</h2>
+<h3>{vodkaItem.strDrink}</h3>
         {vodkaItem.strIngredient1 && (
         <p>{`${vodkaItem.strMeasure1} ${vodkaItem.strIngredient1}`}</p>
         )}
@@ -38,7 +38,7 @@ return (
         {vodkaItem.strIngredient5 && (
         <p>{`${vodkaItem.strMeasure5} ${vodkaItem.strIngredient5}`}</p>
         )}
-</PureModal>;
+</PureModal>
 <button className="button" onClick={() => setModal(true)}>Open simple modal</button>
     </article>
 );

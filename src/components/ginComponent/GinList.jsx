@@ -8,6 +8,7 @@ import Footer from "../footerComponents/Footer";
 const GinList = () => {
     const { ginData, setSelectedCocktail } = useGinContext();
 
+    console.log(ginData);
     return ( 
 <section>
     <Header/>
