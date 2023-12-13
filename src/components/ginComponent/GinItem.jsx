@@ -9,8 +9,11 @@ const GinItem = ({ ginItem }) => {
   return (
     <article>
 
-      <div>
+
+          <div >
         <h3>{ginItem.strDrink}</h3>
+    </div>
+
 <PureModal
     header="Your header"
     footer={

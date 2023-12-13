@@ -22,30 +22,29 @@ function App() {
   return (
     <>
 
+
     
     
       
 
+<FetchButtonContext.Provider value={{ fetchButton, setFetchButton }}>
+      <UserSearchInputContext.Provider value={{ userInput, setUserInput }}>
+    <SearchFetchContext.Provider value={{ searchFetchData, setSearchFetchData }}>
+      <SearchFetch />
+      <Routes>
+        <Route path="/gin"  element={<GinList/>}/>
+        <Route path="/vodka"  element={<VodkaList/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/scotch" element={<Scotch />} />
+        <Route path="/randomdrink" element={<RandomDrink />} />
+          <Route path="/rum" element={<Rum/>}/>
+        <Route path="/alkFrei" element={<AlkFrei/>}/>
+        <Route path="/user-search-list" element={<SearchList />}/>
+      </Routes>
 
-      <FetchButtonContext.Provider value={{ fetchButton, setFetchButton }}>
-        <UserSearchInputContext.Provider value={{ userInput, setUserInput }}>
-          <SearchFetchContext.Provider
-            value={{ searchFetchData, setSearchFetchData }}
-          >
-            <SearchFetch />
-            <Routes>
-              <Route path="/gin" element={<GinList />} />
-              <Route path="/vodka" element={<VodkaList />} />
-              <Route path="/" element={<Home />} />
-              <Route path="/scotch" element={<Scotch />} />
-              <Route path="/randomdrink" element={<RandomDrink />} />
-              <Route path="/rum" element={<Rum />} />
-              <Route path="/alkFrei" element={<AlkFrei />} />
-              <Route path="/user-search-list" element={<SearchList />} />
-            </Routes>
-          </SearchFetchContext.Provider>
-        </UserSearchInputContext.Provider>
-      </FetchButtonContext.Provider>
+    </SearchFetchContext.Provider>
+    </UserSearchInputContext.Provider>
+    </FetchButtonContext.Provider>
 
     </>
   );
