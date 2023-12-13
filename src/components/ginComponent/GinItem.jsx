@@ -7,7 +7,7 @@ const GinItem = ({ ginItem, setSelectedCocktail }) => {
 return (
     <article>
     <div >
-        <h1>{ginItem.strDrink}</h1>
+        <h3>{ginItem.strDrink}</h3>
     </div>
 <PureModal
     header="Your header"

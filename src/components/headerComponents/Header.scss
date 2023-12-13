@@ -12,6 +12,12 @@ header{
             &:hover {
                 color: rgb(218, 215, 215);
             }
+            &:nth-of-type(1){
+                h1{
+                    font-size: 1.5rem;
+                    text-align: left;
+                }
+            }
             &:nth-of-type(2){
                 font-family: 'Poppins_Reg';
             }
@@ -19,7 +25,8 @@ header{
     }
     div{
         padding: 3%;
-        h1{
+        text-align: center;
+        h2{
             margin-top: 4vh;
             margin-bottom: 2vh;
             font-size: 3rem;
