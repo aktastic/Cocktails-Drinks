@@ -1,4 +1,3 @@
-import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import AlkFrei from "./components/alkFrei/AlkFrei";
 import Rum from "./components/rum/Rum";
@@ -22,6 +21,12 @@ function App() {
   const [fetchButton, setFetchButton] = useState(false);
   return (
     <>
+
+    
+    
+      
+
+
       <FetchButtonContext.Provider value={{ fetchButton, setFetchButton }}>
         <UserSearchInputContext.Provider value={{ userInput, setUserInput }}>
           <SearchFetchContext.Provider
@@ -41,6 +46,7 @@ function App() {
           </SearchFetchContext.Provider>
         </UserSearchInputContext.Provider>
       </FetchButtonContext.Provider>
+
     </>
   );
 }
