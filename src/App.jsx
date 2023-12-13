@@ -14,6 +14,7 @@ import {
 } from "./context/Context";
 import SearchFetch from "./data/SearchFetch";
 import SearchList from "./components/headerComponents/SearchList";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [userInput, setUserInput] = useState("");
@@ -21,32 +22,25 @@ function App() {
   const [fetchButton, setFetchButton] = useState(false);
   return (
     <>
-
-
-    
-    
-      
-
-<FetchButtonContext.Provider value={{ fetchButton, setFetchButton }}>
-      <UserSearchInputContext.Provider value={{ userInput, setUserInput }}>
-    <SearchFetchContext.Provider value={{ searchFetchData, setSearchFetchData }}>
-      <SearchFetch />
-      <Routes>
-        <Route path="/gin"  element={<GinList/>}/>
-        <Route path="/vodka"  element={<VodkaList/>}/>
-        <Route path="/" element={<Home />} />
-        <Route path="/scotch" element={<Scotch />} />
-        <Route path="/randomdrink" element={<RandomDrink />} />
-          <Route path="/rum" element={<Rum/>}/>
-        <Route path="/alkFrei" element={<AlkFrei/>}/>
-        <Route path="/user-search-list" element={<SearchList />}/>
-
-      </Routes>
-
-    </SearchFetchContext.Provider>
-    </UserSearchInputContext.Provider>
-    </FetchButtonContext.Provider>
-
+      <FetchButtonContext.Provider value={{ fetchButton, setFetchButton }}>
+        <UserSearchInputContext.Provider value={{ userInput, setUserInput }}>
+          <SearchFetchContext.Provider
+            value={{ searchFetchData, setSearchFetchData }}
+          >
+            <SearchFetch />
+            <Routes>
+              <Route path="/gin" element={<GinList />} />
+              <Route path="/vodka" element={<VodkaList />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/scotch" element={<Scotch />} />
+              <Route path="/randomdrink" element={<RandomDrink />} />
+              <Route path="/rum" element={<Rum />} />
+              <Route path="/alkFrei" element={<AlkFrei />} />
+              <Route path="/user-search-list" element={<SearchList />} />
+            </Routes>
+          </SearchFetchContext.Provider>
+        </UserSearchInputContext.Provider>
+      </FetchButtonContext.Provider>
     </>
   );
 }
