@@ -1,0 +1,115 @@
+
+
+.rum-container {
+    padding: 20px;
+    background-color: #262B46;
+}
+
+
+.rumName{
+    color: white;
+}
+
+
+h1 {
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 3rem;
+}
+
+.cocktail-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cocktail-item {
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #EC8D81;
+}
+
+.cocktail-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.cocktail-item img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.selected-cocktail {
+    position: fixed; /* Festes Position */
+    top: 50%; /* Zentriert auf der vertikalen Achse */
+    left: 50%; /* Zentriert auf der horizontalen Achse */
+    transform: translate(-50%, -50%); /* Zentriert das Element genau im Mittelpunkt */
+    background-color:#262B46;
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    z-index: 9999; /* Immer Sicher sein dass das Modal über anderen Inhalten liegt */
+}
+
+.selected-cocktail img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.selected-cocktail h2 {
+    color: #EC8D81;
+    margin-bottom: 10px;
+}
+
+.selected-cocktail h3 {
+    margin-top: 20px;
+    color: #EC8D81;
+}
+
+.selected-cocktail ul {
+    list-style: none;
+    padding: 0;
+}
+
+.selected-cocktail ul li {
+    margin-bottom: 5px;
+}
+
+.selected-cocktail p {
+    margin-top: 20px;
+}
+
+
+
+/* Stil des Schließ-Buttons im Modal */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #EC8D81;
+    background: none;
+    border: none;
+    font-size: 18px;
+    padding: 5px; 
+     max-height: 70vh; /* kann angepasst werden */
+    overflow-y: auto;
+}

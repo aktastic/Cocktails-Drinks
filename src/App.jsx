@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
+import AlkFrei from "./components/alkFrei/AlkFrei"
+import Rum from "./components/rum/Rum"
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Scotch from "./components/scotchComponents/Scotch";
@@ -20,6 +22,7 @@ function App() {
   return (
     <>
 
+
     <FetchButtonContext.Provider value={{ fetchButton, setFetchButton }}>
       <UserSearchInputContext.Provider value={{ userInput, setUserInput }}>
     <SearchFetchContext.Provider value={{ searchFetchData, setSearchFetchData }}>
@@ -30,6 +33,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/scotch" element={<Scotch />} />
         <Route path="/randomdrink" element={<RandomDrink />} />
+          <Route path="/rum" element={<Rum/>}/>
+        <Route path="/alkFrei" element={<AlkFrei/>}/>
       </Routes>
 
     </SearchFetchContext.Provider>
@@ -38,6 +43,7 @@ function App() {
     
     
       
+
 
     </>
   );
