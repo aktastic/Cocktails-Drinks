@@ -1,0 +1,27 @@
+.searchbar_wrap{
+    padding-bottom: 5vh;
+
+    form{
+        input{
+            padding: 8px;
+            border-radius: 8px;
+            border: none;
+            margin: 4px;
+            font-family: 'Poppins_Reg';
+        }
+        a{
+            input[type='button']{
+                background-color: #6FC3DF;
+            }
+        }
+        input[type='button']{
+            background-color: #6FC3DF;
+            font-family: 'Poppins_Reg';
+            &:hover{
+                cursor: pointer;
+                background-color: #31b6e2;
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+
+    
+    .singleSearchItem_wrap{
+        background-color: #6FC3DF;
+        padding: 10%;
+        text-align: center;
+        transition: 0.3s;
+        &:hover {
+            background-color: #E7B788;
+            cursor: pointer;
+        }
+        h3{
+            font-size: 1.75rem;
+            color: white;
+            margin-top: 1vh;
+        }
+    }
