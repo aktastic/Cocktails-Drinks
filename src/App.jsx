@@ -40,6 +40,7 @@ function App() {
           <Route path="/rum" element={<Rum/>}/>
         <Route path="/alkFrei" element={<AlkFrei/>}/>
         <Route path="/user-search-list" element={<SearchList />}/>
+
       </Routes>
 
     </SearchFetchContext.Provider>

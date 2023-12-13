@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/headerComponents/Header";
 import Footer from "../components/footerComponents/Footer";
 
+
 const Home = () => {
   return (
     <>

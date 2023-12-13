@@ -3,22 +3,27 @@ import PureModal from "react-pure-modal";
 
 const GinItem = ({ ginItem }) => {
 
+
   const [modal, setModal] = useState(false);
 
 
   return (
     <article>
 
+    
+
+
 
           <div >
+
         <h3>{ginItem.strDrink}</h3>
-    </div>
+   </div>
 
 <PureModal
     header="Your header"
     footer={
     
-    </div>
+  
     }
     isOpen={modal}
     closeButton="close"
