@@ -3,7 +3,6 @@ import "./App.scss";
 import AlkFrei from "./components/alkFrei/AlkFrei"
 import Rum from "./components/rum/Rum"
 import Home from "./pages/Home";
-import { Routes, Route } from "react-router-dom";
 import Scotch from "./components/scotchComponents/Scotch";
 import RandomDrink from "./components/randomDrinkComponent/RandomDrink";
 import GinList from "./components/ginComponent/GinList";
@@ -35,6 +34,7 @@ function App() {
         <Route path="/randomdrink" element={<RandomDrink />} />
           <Route path="/rum" element={<Rum/>}/>
         <Route path="/alkFrei" element={<AlkFrei/>}/>
+        <Route path="//user-search-list" element={<SearchList/>}/>
       </Routes>
 
     </SearchFetchContext.Provider>

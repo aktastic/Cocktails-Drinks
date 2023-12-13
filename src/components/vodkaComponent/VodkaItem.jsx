@@ -8,7 +8,7 @@ console.log(vodkaItem);
 return (
     <article>
     <div >
-        <h1>{vodkaItem.strDrink}</h1>
+        <h3>{vodkaItem.strDrink}</h3>
     </div>
 <PureModal
     header="Your header"

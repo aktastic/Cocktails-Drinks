@@ -42,7 +42,7 @@ useEffect(() => {
     const useGinContext = () => {
     const context = useContext(GinContext);
     if (!context) {
-    throw new Error('useGinContext muss innerhalb deines GinContext.Provider´s sein');
+    throw new Error('useGinContext muss innerhalb deines GinContext.Providers sein');
 }
     return context;
 };

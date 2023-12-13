@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import PureModal from 'react-pure-modal';
 
-const GinItem = ({ ginItem, setSelectedCocktail }) => {
+const GinItem = ({ ginItem }) => {
     const [modal, setModal] = useState(false);
 
 return (
     <article>
     <div >
-        <h1>{ginItem.strDrink}</h1>
+        <h3>{ginItem.strDrink}</h3>
     </div>
 <PureModal
     header="Your header"
