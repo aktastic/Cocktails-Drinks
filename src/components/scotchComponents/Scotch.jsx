@@ -58,6 +58,7 @@ const Scotch = () => {
             return true;
           }}
         >
+          <img src={scotchDetailsList.strDrinkThumb} />
           {scotchDetailsList.strIngredient1 && (
             <p>{`${scotchDetailsList.strMeasure1} ${scotchDetailsList.strIngredient1}`}</p>
           )}
