@@ -27,8 +27,8 @@ const Header = () => {
 
         </nav>
         <div>
-          <h1>Cocktails & Drinks!</h1>
-          <p>HERZLICH WILLKOMEN IN DER WELT DER COKTAILS UND GETRÄNKE</p>
+          <h2>Cocktails & Drinks!</h2>
+          <p>WELCOME TO THE WORLD OF COCKTAILS AND DRINKS</p>
         </div>
         
         <Searchbar />
