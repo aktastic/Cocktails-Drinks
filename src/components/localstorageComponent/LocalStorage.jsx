@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Header from "../headerComponents/Header";
 import Footer from "../footerComponents/Footer";
+import CloseIcon from "../../assets/svg/CloseIcon";
 import "./LocalStorage.scss";
 
 const LocalStorage = () => {
@@ -134,29 +135,33 @@ const LocalStorage = () => {
               }))
             }
           />
-          <button onClick={() => storeInputData()}>SUBMIT</button>
+          <button onClick={() => storeInputData()}>ADD Cocktail</button>
         </form>
       </section>
       {newCocktail?.map((cocktail, index) => (
-        <article key={index}>
-          <h2>{"Cocktail: " + cocktail.name}</h2>
-          <p>{"Category: " + cocktail.category}</p>
-          <p>{"imageURL: " + cocktail.imageURL}</p>
-          <p>{"Description: " + cocktail.description}</p>
-          <p>{"Ingrdient 1: " + cocktail.ingredientOne}</p>
-          <p>{"Amount of Ingrdient 1: " + cocktail.amountIngredientOne}</p>
-          <p>{"Ingrdient 2: " + cocktail.ingredientTwo}</p>
-          <p>{"Amount of Ingrdient 2: " + cocktail.amountIngredientTwo}</p>
-          <p>{"Ingrdient 3: " + cocktail.ingredientThree}</p>
-          <p>{"Amount of Ingrdient 3: " + cocktail.amountIngredientThree}</p>
-          <button
-            onClick={(cocktail) => {
-              deleteStorageItem(cocktail);
-            }}
-          >
-            Delete
-          </button>
-        </article>
+        <div className="newcocktail_Container" key={index}>
+          <article>
+            <h2>{"Cocktail: " + cocktail.name}</h2>
+            <p>{"Category: " + cocktail.category}</p>
+            <p>
+              <img src={cocktail.imageURL} alt="" />{" "}
+            </p>
+            <p>{"Description: " + cocktail.description}</p>
+            <p>{"Ingrdient 1: " + cocktail.ingredientOne}</p>
+            <p>{"Amount of Ingrdient 1: " + cocktail.amountIngredientOne}</p>
+            <p>{"Ingrdient 2: " + cocktail.ingredientTwo}</p>
+            <p>{"Amount of Ingrdient 2: " + cocktail.amountIngredientTwo}</p>
+            <p>{"Ingrdient 3: " + cocktail.ingredientThree}</p>
+            <p>{"Amount of Ingrdient 3: " + cocktail.amountIngredientThree}</p>
+            <button
+              onClick={(cocktail) => {
+                deleteStorageItem(cocktail);
+              }}
+            >
+              <CloseIcon />
+            </button>
+          </article>
+        </div>
       ))}
 
       <Footer />
