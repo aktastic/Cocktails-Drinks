@@ -2,12 +2,13 @@
     padding-bottom: 8vh;
 
     form{
-        input{
-            padding: 8px;
+        
+        input[type='text']{
             border-radius: 8px;
+            padding: 8px;
             border: none;
-            margin: 4px;
             font-family: 'Poppins_Reg';
+            margin: 4px;
         }
         a{
             input[type='button']{
@@ -15,9 +16,13 @@
             }
         }
         input[type='button']{
+            padding: 8px;
+            border-radius: 8px;
+            border: none;
             background-color: #6FC3DF;
             font-family: 'Poppins_Reg';
             transition: 0.3s;
+            margin: 4px;
             &:hover{
                 cursor: pointer;
                 background-color: #31b6e2;
