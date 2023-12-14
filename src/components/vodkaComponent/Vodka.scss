@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: "Poppins_Reg";
+}
+
+.galleryWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cardContainer {
+    margin: 10px;
+}
+
+.itemCard {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+}
+
+.itemCard img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.PureModal {
+    text-align: center;
+    position: fixed;
+    left: 43%;
+    top: 30vh;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border: 1px solid 8%;
+    background-color: grey;
+    font-family: "Poppins_Reg";
+}
+
+.PureModal-content {
+    padding: 20px;
+}
+
+.PureModal-close {
+    cursor: pointer;
+}

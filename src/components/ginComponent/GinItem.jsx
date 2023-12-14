@@ -5,13 +5,13 @@ const GinItem = ({ ginItem }) => {
   const [modal, setModal] = useState(false);
 
   return (
-    <article>
+    <article onClick={() => setModal(true)}>
       <div>
         <h3>{ginItem.strDrink}</h3>
       </div>
 
       <PureModal
-        header="Your header"
+        header={ginItem.strDrink}
         footer={<div></div>}
         isOpen={modal}
         closeButton="close"
@@ -21,30 +21,25 @@ const GinItem = ({ ginItem }) => {
           return true;
         }}
       >
-        <h3>{ginItem.strDrink}</h3>
-
-        {ginItem.strIngredient1 && (
-          <p>{`${ginItem.strMeasure1} ${ginItem.strIngredient1}`}</p>
-        )}
-        {ginItem.strIngredient2 && (
-          <p>{`${ginItem.strMeasure2} ${ginItem.strIngredient2}`}</p>
-        )}
-        {ginItem.strIngredient3 && (
-          <p>{`${ginItem.strMeasure3} ${ginItem.strIngredient3}`}</p>
-        )}
-        {ginItem.strIngredient4 && (
-          <p>{`${ginItem.strMeasure4} ${ginItem.strIngredient4}`}</p>
-        )}
-        {ginItem.strIngredient5 && (
-          <p>{`${ginItem.strMeasure5} ${ginItem.strIngredient5}`}</p>
-        )}
+        {renderIngredient(ginItem.strMeasure1, ginItem.strIngredient1)}
+        {renderIngredient(ginItem.strMeasure2, ginItem.strIngredient2)}
+        {renderIngredient(ginItem.strMeasure3, ginItem.strIngredient3)}
+        {renderIngredient(ginItem.strMeasure4, ginItem.strIngredient4)}
       </PureModal>
-
-      <button className="button" onClick={() => setModal(true)}>
-        Details
-      </button>
+      
     </article>
   );
 };
+
+const renderIngredient = (measure, ingredient) => {
+  if (ingredient) {
+    if (measure) {
+      return <p>{`${measure} ${ingredient}`}</p>;
+    }
+    return <p>{ingredient}</p>;
+  }
+  return null;
+};
+
 
 export default GinItem;
