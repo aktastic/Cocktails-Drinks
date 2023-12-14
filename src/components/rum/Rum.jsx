@@ -61,7 +61,6 @@ const Rum = () => {
     <>
     <Header/>
     <div className="rum-container">
-      <h1>Rum Cocktails</h1>
 
       <div className="cocktail-grid">
         {cocktails.map(cocktail => (
@@ -84,7 +83,7 @@ const Rum = () => {
             </ul>
             <p>{selectedCocktail.instructions}</p>
             <button className="modal-close" onClick={handleCloseModal}>
-              Close
+              X
             </button>
           </div>
         )}
