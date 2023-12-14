@@ -1,12 +1,12 @@
 $scotchColor: #8b4513;
 
 .scotch__wrapper {
-  margin: 5% 2%;
   text-align: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
-
+  background-color: #262b46;
+  padding: 5% 2%;
   .scotch_container_design {
     position: relative;
     overflow: hidden;
@@ -14,7 +14,9 @@ $scotchColor: #8b4513;
     box-shadow: 0 4px 8px #8b4513;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
     width: 95%;
-
+    background-color: rgb(219, 211, 211);
+    display: flex;
+    justify-content: flex-end;
     &:hover {
       box-shadow: 0 8px 16px #8b4513;
       transform: scale(1.05);
@@ -28,9 +30,62 @@ $scotchColor: #8b4513;
     }
 
     h2 {
+      justify-content: center;
+      align-items: center;
       margin-top: 10px;
       font-size: 1.2rem;
       color: #333;
+      margin-right: 20%;
+      margin-top: 20%;
     }
+  }
+}
+
+.pure-modal-backdrop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(11, 10, 10, 0.877);
+  color: white;
+  padding: 2vh 3%;
+  .pure-modal {
+    .panel {
+      .panel-heading {
+        .panel-title {
+          font-size: 1.75rem;
+          text-align: center;
+          margin-bottom: 2vh;
+        }
+      }
+      .panel-body {
+        img {
+          max-width: 60%;
+          margin: 1vh auto;
+          object-fit: cover;
+        }
+        .info_wrap {
+          h4 {
+            font-size: 1.25rem;
+            margin-block: 1vh;
+          }
+        }
+      }
+      .close {
+        font-size: 1.5rem;
+        text-align: center;
+        color: #6fc3df;
+        cursor: pointer;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .singleSearchItem_wrap {
+    margin-bottom: 2vh;
   }
 }

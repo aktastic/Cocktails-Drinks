@@ -14,11 +14,20 @@ const LocalStorage = () => {
   }, [newCocktail]);
 
   const storeInputData = () => {
+    event.preventDefault();
     setNewCocktail((cocktailInput) => [...cocktailInput, cocktailConstructor]);
     setCocktailConstructor({});
     document
       .querySelectorAll(".newCocktail__wrapper input")
       .forEach((input) => (input.value = ""));
+  };
+
+  const deleteStorageItem = (itemToDelete) => {
+    const updatedLocalStorage = storedCocktail.filter((cocktail) => {
+      cocktail !== itemToDelete;
+    });
+    localStorage.setItem("newCocktail", JSON.stringify(updatedLocalStorage));
+    setNewCocktail(updatedLocalStorage);
   };
   return (
     <>
@@ -127,21 +136,29 @@ const LocalStorage = () => {
           />
           <button onClick={() => storeInputData()}>SUBMIT</button>
         </form>
-        {newCocktail?.map((cocktail, index) => (
-          <article key={index}>
-            <h2>{cocktail.name}</h2>
-            <h3>{cocktail.category}</h3>
-            <h3>{cocktail.imageURL}</h3>
-            <h3>{cocktail.description}</h3>
-            <h3>{cocktail.ingredientOne}</h3>
-            <h3>{cocktail.amountIngredientOne}</h3>
-            <h3>{cocktail.ingredientTwo}</h3>
-            <h3>{cocktail.amountIngredientTwo}</h3>
-            <h3>{cocktail.ingredientThree}</h3>
-            <h3>{cocktail.amountIngredientThree}</h3>
-          </article>
-        ))}
       </section>
+      {newCocktail?.map((cocktail, index) => (
+        <article key={index}>
+          <h2>{"Cocktail: " + cocktail.name}</h2>
+          <p>{"Category: " + cocktail.category}</p>
+          <p>{"imageURL: " + cocktail.imageURL}</p>
+          <p>{"Description: " + cocktail.description}</p>
+          <p>{"Ingrdient 1: " + cocktail.ingredientOne}</p>
+          <p>{"Amount of Ingrdient 1: " + cocktail.amountIngredientOne}</p>
+          <p>{"Ingrdient 2: " + cocktail.ingredientTwo}</p>
+          <p>{"Amount of Ingrdient 2: " + cocktail.amountIngredientTwo}</p>
+          <p>{"Ingrdient 3: " + cocktail.ingredientThree}</p>
+          <p>{"Amount of Ingrdient 3: " + cocktail.amountIngredientThree}</p>
+          <button
+            onClick={(cocktail) => {
+              deleteStorageItem(cocktail);
+            }}
+          >
+            Delete
+          </button>
+        </article>
+      ))}
+
       <Footer />
     </>
   );
