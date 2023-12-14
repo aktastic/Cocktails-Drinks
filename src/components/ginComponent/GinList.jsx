@@ -3,6 +3,7 @@ import GinItem from "./GinItem";
 import { useGinContext } from "../../context/GinContext";
 import Header from "../headerComponents/Header";
 import Footer from "../footerComponents/Footer";
+import './GinList.scss'
 
 
 const GinList = () => {
@@ -10,8 +11,9 @@ const GinList = () => {
 
     console.log(ginData);
     return ( 
-<section>
+    <>
     <Header/>
+    <section className="ginListWrap">
     {ginData.length > 0 ? (
         ginData.map((ginItem) => (
             <GinItem
@@ -23,8 +25,9 @@ const GinList = () => {
     ) : (
         <p>Lade Gin-Daten...</p>
     )}
-    <Footer/>
     </section>
+    <Footer/>
+    </>
     );
 }
 

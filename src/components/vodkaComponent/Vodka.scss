@@ -1,0 +1,66 @@
+.singleVodkaItemWrap{
+    background-color: #6e5ebc;
+    padding: 10%;
+    text-align: center;
+    transition: 0.3s;
+    transition: 0.3s;
+    &:hover {
+        background-color: #8EA9E8;
+        cursor: pointer;
+    }
+    img{
+        max-width: 85%;
+        margin: 0 auto;
+    }
+    h3{
+        font-size: 1.75rem;
+        color: white;
+        margin-top: 1vh;
+    }
+}
+
+.pure-modal-backdrop{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(11, 10, 10, 0.877);
+    color: white;
+    padding: 2vh 3%;
+    .pure-modal{
+        .panel{
+            .panel-heading{
+                .panel-title{
+                    font-size: 1.75rem;
+                    text-align: center;
+                    margin-bottom: 2vh;
+                }
+            }
+            .panel-body{
+                img{
+                    max-width: 60%;
+                    margin: 1vh auto;
+                    object-fit: cover;
+                }
+                .infoVodkaWrap{
+                    h4{
+                        font-size: 1.25rem;
+                        margin-block: 1vh;
+                    }
+                }
+            }
+            .close{
+                font-size: 1.5rem;
+                text-align: center;
+                color: #6FC3DF;
+                cursor: pointer;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.vodkaListWrap .singleVodkaItemWrap:hover {
+    transform: scale(1.025, 1.025);
+}

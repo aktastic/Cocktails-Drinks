@@ -1,6 +1,7 @@
 import "./SearchItem.scss";
 import React, { useState } from "react";
 import PureModal from "react-pure-modal";
+import CloseIcon from "../../assets/svg/CloseIcon";
 
 const SearchItem = (props) => {
   const [modal, setModal] = useState(false);
@@ -32,7 +33,7 @@ const SearchItem = (props) => {
         header={props.drinkName}
         footer={<div></div>}
         isOpen={modal}
-        closeButton="CLOSE"
+        closeButton={<CloseIcon/>}
         closeButtonPosition="bottom"
         onClose={() => {
           setModal(false);
