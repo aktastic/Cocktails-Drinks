@@ -23,17 +23,36 @@ h1 {
     grid-template-columns: repeat(2,1fr);
     justify-content: center;
     margin-top: 20px;
+    gap: 30px;
 }
 
 .cocktail-item {
-    border: 1px solid black;
-    padding: 20px;
-    background-color: #EC8D81;
+    background-color: #E7B788;
+    padding: 10%;
+    text-align: center;
+    transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 20px;
+
+    &:hover {
+        background-color: #e09e5c;
+        cursor: pointer;
+    }
+    img{
+        max-width: 85%;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+    p{
+        font-size: 1.75rem;
+        color: white;
+        margin-top: 1vh;
+    }
 }
 
 .cocktail-item img {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     cursor: pointer;
     border-radius: 10px;
@@ -52,7 +71,7 @@ h1 {
     top: 50%; /* Zentriert auf der vertikalen Achse */
     left: 50%; /* Zentriert auf der horizontalen Achse */
     transform: translate(-50%, -50%); /* Zentriert das Element genau im Mittelpunkt */
-    background-color:#262B46;
+    background-color: rgba(11, 10, 10, 0.877);
     border-radius: 10px;
     color: white;
     padding: 20px;
@@ -75,13 +94,13 @@ h1 {
 
 
 .selected-cocktail h2 {
-    color: #EC8D81;
+    color: white;
     margin-bottom: 10px;
 }
 
 .selected-cocktail h3 {
     margin-top: 20px;
-    color: #EC8D81;
+    color:white;
 }
 
 .selected-cocktail ul {
@@ -105,7 +124,7 @@ h1 {
     top: 10px;
     right: 10px;
     cursor: pointer;
-    color: #EC8D81;
+    color: white;
     background: none;
     border: none;
     font-size: 18px;

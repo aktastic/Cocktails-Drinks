@@ -69,7 +69,6 @@ return (
     <>
     <Header/>
     <div className="alk-frei-container">
-    <h1>Non-Alcoholic Cocktails</h1>
 
     <div className="non-cocktail-grid">
         {cocktails.map(cocktail => (
