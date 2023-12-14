@@ -3,9 +3,8 @@
     padding: 10%;
     text-align: center;
     transition: 0.3s;
-    transition: 0.3s;
     &:hover {
-        background-color: #8EA9E8;
+        transform: scale(1.025);
         cursor: pointer;
     }
     img{

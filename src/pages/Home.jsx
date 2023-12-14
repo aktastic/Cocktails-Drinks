@@ -47,15 +47,13 @@ const Home = () => {
             <h2>Non-alcoholic</h2>
             <p>Discover delicious Drinks without alcohol</p>
           </div>
-    
-    
           </Link>
     
-    <Link to="/localstorage">
-<div>
-<h2>Add own Cocktail</h2>
-</div>
-</Link>
+        <Link to="/localstorage">
+          <div className="localstorage_link">
+            <h2>Add your own Cocktail</h2>
+            </div>
+        </Link>
 
       </main>
 
