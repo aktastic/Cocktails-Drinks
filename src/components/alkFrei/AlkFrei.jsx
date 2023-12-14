@@ -3,6 +3,7 @@ import Modal from 'react-responsive-modal';
 import './AlkFrei.scss'; // Import des SCSS-Stils
 import Header from '../headerComponents/Header';
 import Footer from '../footerComponents/Footer';
+import CloseIcon from '../../assets/svg/CloseIcon'
 
 const AlkFrei = () => {
 const [cocktails, setCocktails] = useState([]);
@@ -93,7 +94,7 @@ return (
             <p className='tipps'>Tipps:</p>
             <p>{selectedCocktail.instructions}</p>
             <button className="modal-close" onClick={handleCloseModal}>
-            X
+            <CloseIcon/>
             </button>
         </div>
         )}

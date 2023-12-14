@@ -4,6 +4,7 @@ import "./Scotch.scss";
 import Header from "../headerComponents/Header";
 import Footer from "../footerComponents/Footer";
 import PureModal from "react-pure-modal";
+import CloseIcon from "../../assets/svg/CloseIcon";
 
 const Scotch = () => {
   const [scotchList, setScotchList] = useState([]);
@@ -51,7 +52,7 @@ const Scotch = () => {
           header={scotchDetailsList.strDrink}
           footer={<div></div>}
           isOpen={modal}
-          closeButton="close"
+          closeButton={<CloseIcon/>}
           closeButtonPosition="bottom"
           onClose={() => {
             setModal(false);
