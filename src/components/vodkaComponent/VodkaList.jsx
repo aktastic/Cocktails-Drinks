@@ -2,7 +2,7 @@ import { useVodkaContext } from "../../context/VodkaContxt";
 import Footer from "../footerComponents/Footer";
 import Header from "../headerComponents/Header";
 import VodkaItem from "./VodkaItem";
-import './Vodka.scss'
+import './VodkaList.scss'
 
 const VodkaList = () => {
 
@@ -10,9 +10,9 @@ const VodkaList = () => {
 
     console.log(vodkaData);
     return ( 
-        <section >
+        <>
             <Header/>
-            <section className="galleryWrapper">
+            <section className="vodkaListWrap">
             {vodkaData.length > 0 ? (
                 vodkaData.map((vodkaItem)=> (
                     <VodkaItem 
@@ -27,7 +27,7 @@ const VodkaList = () => {
             )}
             </section>
             <Footer/>
-        </section>
+        </>
     );
 }
 

@@ -1,5 +1,5 @@
 .searchbar_wrap{
-    padding-bottom: 5vh;
+    padding-bottom: 8vh;
 
     form{
         input{
@@ -17,6 +17,7 @@
         input[type='button']{
             background-color: #6FC3DF;
             font-family: 'Poppins_Reg';
+            transition: 0.3s;
             &:hover{
                 cursor: pointer;
                 background-color: #31b6e2;

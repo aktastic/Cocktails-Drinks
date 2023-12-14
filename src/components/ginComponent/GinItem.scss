@@ -1,0 +1,25 @@
+
+.singleGinItemWrap {
+    background-color: #6FC3DF;
+    padding: 10%;
+    text-align: center;
+    transition: 0.3s;
+
+    img {
+        max-width: 85%;
+        margin: 0 auto;
+        transition: 0.3s;
+    }
+    h3 {
+        font-size: 1.75rem;
+        color: white;
+        margin-top: 1vh;
+        transition: 0.3s;
+    }
+}
+
+
+.ginListWrap .singleGinItemWrap:hover {
+    transform: scale(1.025, 1.025);
+}
+
