@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import Header from "../components/headerComponents/Header";
 import Footer from "../components/footerComponents/Footer";
+
 import './Home.scss'
+
 
 const Home = () => {
   return (
     <>
       <Header />
       <main>
+
         <Link to="/gin" >
           <div className="gin_link">
             <h2>Gin</h2>
@@ -44,7 +47,16 @@ const Home = () => {
             <h2>Non-alcoholic</h2>
             <p>Discover delicious Drinks without alcohol</p>
           </div>
+    
+    
           </Link>
+    
+    <Link to="/localstorage">
+<div>
+<h2>Add own Cocktail</h2>
+</div>
+</Link>
+
       </main>
 
       <Footer />

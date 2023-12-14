@@ -15,6 +15,7 @@ import {
 import SearchFetch from "./data/SearchFetch";
 import SearchList from "./components/headerComponents/SearchList";
 import { Routes, Route } from "react-router-dom";
+import LocalStorage from "./components/localstorageComponent/LocalStorage";
 
 function App() {
   const [userInput, setUserInput] = useState("");
@@ -37,6 +38,7 @@ function App() {
               <Route path="/rum" element={<Rum />} />
               <Route path="/alkFrei" element={<AlkFrei />} />
               <Route path="/user-search-list" element={<SearchList />} />
+              <Route path="/localstorage" element={<LocalStorage />} />
             </Routes>
           </SearchFetchContext.Provider>
         </UserSearchInputContext.Provider>
