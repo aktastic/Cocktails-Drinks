@@ -1,50 +1,58 @@
 import React, { useState } from "react";
 import PureModal from "react-pure-modal";
+import './GinItem.scss'
+import CloseIcon from "../../assets/svg/CloseIcon";
 
 const GinItem = ({ ginItem }) => {
   const [modal, setModal] = useState(false);
 
   return (
-    <article>
+    <>
+    <article className="singleGinItemWrap" onClick={() => setModal(true)}>
       <div>
+        <img src={ginItem.strDrinkThumb} alt="" />
         <h3>{ginItem.strDrink}</h3>
       </div>
-
+      </article>
       <PureModal
-        header="Your header"
+        header={ginItem.strDrink}
         footer={<div></div>}
         isOpen={modal}
-        closeButton="close"
+        closeButton={<CloseIcon/>}
         closeButtonPosition="bottom"
         onClose={() => {
           setModal(false);
           return true;
         }}
       >
-        <h3>{ginItem.strDrink}</h3>
+        <img src={ginItem.strDrinkThumb} alt="" />
+        <div className="infoGinWrap">
+        <h4>Ingredients:</h4>
+        {renderIngredient(ginItem.strMeasure1, ginItem.strIngredient1)}
+        {renderIngredient(ginItem.strMeasure2, ginItem.strIngredient2)}
+        {renderIngredient(ginItem.strMeasure3, ginItem.strIngredient3)}
+        {renderIngredient(ginItem.strMeasure4, ginItem.strIngredient4)}
 
-        {ginItem.strIngredient1 && (
-          <p>{`${ginItem.strMeasure1} ${ginItem.strIngredient1}`}</p>
-        )}
-        {ginItem.strIngredient2 && (
-          <p>{`${ginItem.strMeasure2} ${ginItem.strIngredient2}`}</p>
-        )}
-        {ginItem.strIngredient3 && (
-          <p>{`${ginItem.strMeasure3} ${ginItem.strIngredient3}`}</p>
-        )}
-        {ginItem.strIngredient4 && (
-          <p>{`${ginItem.strMeasure4} ${ginItem.strIngredient4}`}</p>
-        )}
-        {ginItem.strIngredient5 && (
-          <p>{`${ginItem.strMeasure5} ${ginItem.strIngredient5}`}</p>
-        )}
+        <h4>Instructions:</h4>
+        <p>{ginItem.strInstructions}</p>
+
+        </div>
+
       </PureModal>
-
-      <button className="button" onClick={() => setModal(true)}>
-        Details
-      </button>
-    </article>
+      
+      </>
   );
 };
+
+const renderIngredient = (measure, ingredient) => {
+  if (ingredient) {
+    if (measure) {
+      return <p>{`${measure} ${ingredient}`}</p>;
+    }
+    return <p>{ingredient}</p>;
+  }
+  return null;
+};
+
 
 export default GinItem;

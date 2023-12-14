@@ -5,6 +5,11 @@ main{
         text-decoration: none;
         cursor: pointer;
         color: white;
+        &:nth-of-type(7){
+            grid-column: 1 / 3;
+            grid-row: 4 / 5;
+            text-align: center;
+        }
     }
     div{
         height: 35vh;
@@ -56,6 +61,13 @@ main{
         transition: 0.3s;
         &:hover{
             background-color: #39b472;
+        }
+    }
+    .localstorage_link{
+        background-color: #e4e79a;
+        transition: 0.3s;
+        &:hover{
+            background-color: #e5ea6a;
         }
     }
 }

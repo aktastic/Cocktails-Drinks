@@ -12,10 +12,6 @@ const Searchbar = () => {
     setFetchButton(!fetchButton)
   }
 
-  const clearInputfield = () => {
-    setUserInput('')
-  }
-
   return (
     <>
       <div className="searchbar_wrap">
@@ -24,7 +20,7 @@ const Searchbar = () => {
           <Link to='/user-search-list'>
             <input type="button" value="Search" onClick={handleClick}/>
           </Link>
-          <input type="button" value="Clear Inputfield" onClick={clearInputfield}/>
+          
         </form>
         
       </div>

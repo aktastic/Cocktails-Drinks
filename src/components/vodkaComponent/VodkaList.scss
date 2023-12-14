@@ -1,14 +1,14 @@
-.searchList_wrap{
+.vodkaListWrap{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #262B46;
     position: relative;
-    gap: 48px;
+    gap: 16px;
     padding: 24px;
 }
 
 @media screen and (max-width: 576px){
-    .searchList_wrap{
+    .vodkaListWrap{
         display: block;
         padding: 0;
         padding-bottom: 2vh;

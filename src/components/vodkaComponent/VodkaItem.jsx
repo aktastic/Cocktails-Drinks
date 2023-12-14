@@ -1,45 +1,54 @@
 import React, { useState } from "react";
 import PureModal from "react-pure-modal";
+import './Vodka.scss'
+import CloseIcon from "../../assets/svg/CloseIcon";
 
-const VodkaItem = ({ vodkaItem, setSelectedCocktail }) => {
-  const [modal, setModal] = useState(false);
+const VodkaItem = ({ vodkaItem }) => {
+    const [modal, setModal] = useState(false);
 
-  console.log(vodkaItem);
-  return (
-    <article onClick={() => setModal(true)}>
-      <div>
+    return (
+        <>
+    <article className="singleVodkaItemWrap" onClick={() => setModal(true)}>
+        <img src={vodkaItem.strDrinkThumb} alt="" />
         <h3>{vodkaItem.strDrink}</h3>
-      </div>
-      <PureModal
-        header="Your header"
+    </article>
+    <PureModal
+        className="PureModal"
+        header={vodkaItem.strDrink}
         footer={<div></div>}
         isOpen={modal}
-        closeButton="close"
+        closeButton={<CloseIcon/>}
         closeButtonPosition="bottom"
         onClose={() => {
-          setModal(false);
-          return true;
+        setModal(false);
+        return true;
         }}
-      >
-        <h3>{vodkaItem.strDrink}</h3>
-        {vodkaItem.strIngredient1 && (
-          <p>{`${vodkaItem.strMeasure1} ${vodkaItem.strIngredient1}`}</p>
-        )}
-        {vodkaItem.strIngredient2 && (
-          <p>{`${vodkaItem.strMeasure2} ${vodkaItem.strIngredient2}`}</p>
-        )}
-        {vodkaItem.strIngredient3 && (
-          <p>{`${vodkaItem.strMeasure3} ${vodkaItem.strIngredient3}`}</p>
-        )}
-        {vodkaItem.strIngredient4 && (
-          <p>{`${vodkaItem.strMeasure4} ${vodkaItem.strIngredient4}`}</p>
-        )}
-        {vodkaItem.strIngredient5 && (
-          <p>{`${vodkaItem.strMeasure5} ${vodkaItem.strIngredient5}`}</p>
-        )}
-      </PureModal>
-    </article>
-  );
+    >
+        <img src={vodkaItem.strDrinkThumb} />
+        <div className="infoVodkaWrap">
+        <h4>Ingredients:</h4>
+        {renderIngredient(vodkaItem.strMeasure1, vodkaItem.strIngredient1)}
+        {renderIngredient(vodkaItem.strMeasure2, vodkaItem.strIngredient2)}
+        {renderIngredient(vodkaItem.strMeasure3, vodkaItem.strIngredient3)}
+        {renderIngredient(vodkaItem.strMeasure4, vodkaItem.strIngredient4)}
+
+        <h4>Instructions:</h4>
+        <p>{vodkaItem.strInstructions}</p>
+        </div>
+
+    </PureModal>
+    </>
+    );
+};
+
+const renderIngredient = (measure, ingredient) => {
+    if (ingredient) {
+        if (measure) {
+        return <p>{`${measure} ${ingredient}`}</p>;
+        }
+        return <p>{ingredient}</p>;
+    }
+    return null;
 };
 
 export default VodkaItem;

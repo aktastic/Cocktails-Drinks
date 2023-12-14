@@ -1,4 +1,4 @@
-.searchList_wrap{
+.ginListWrap{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #262B46;
@@ -7,8 +7,10 @@
     padding: 24px;
 }
 
+
 @media screen and (max-width: 576px){
-    .searchList_wrap{
+    .ginListWrap{
+
         display: block;
         padding: 0;
         padding-bottom: 2vh;
